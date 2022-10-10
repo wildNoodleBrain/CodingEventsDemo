@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using CodingEventsDemo.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CodingEventsDemo.Data
 {
@@ -32,5 +33,6 @@ namespace CodingEventsDemo.Data
         {
             return Events[id];
         }
+        
     }
 }
