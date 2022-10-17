@@ -32,34 +32,36 @@ namespace coding_events_practice.Controllers
         [HttpPost]
         public IActionResult Add(AddEventViewModel addEventViewModel)
         {
-            Event newEvent = new Event
+            if (ModelState.IsValid)
             {
-                Name = addEventViewModel.Name,
-                Description = addEventViewModel.Description,
-                ContactEmail = addEventViewModel.ContactEmail
-            };
+                Event newEvent = new Event
+                {
+                    Name = addEventViewModel.Name,
+                    Description = addEventViewModel.Description,
+                    ContactEmail = addEventViewModel.ContactEmail
+                };
 
-            EventData.Add(newEvent);
-      
-            return Redirect("/Events");
+                EventData.Add(newEvent);
+
+                return Redirect("/Events");
+            }
         }
-
-        public IActionResult Delete()
-        {
-            ViewBag.events = EventData.GetAll();
-
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Delete(int[] eventIds)
-        {
-            foreach (int eventId in eventIds)
+            public IActionResult Delete()
             {
-                EventData.Remove(eventId);
+                ViewBag.events = EventData.GetAll();
+
+                return View();
             }
 
-            return Redirect("/Events");
+            [HttpPost]
+            public IActionResult Delete(int[] eventIds)
+            {
+                foreach (int eventId in eventIds)
+                {
+                    EventData.Remove(eventId);
+                }
+
+                return Redirect("/Events");
+            }
         }
-    }
-}
+    } 
