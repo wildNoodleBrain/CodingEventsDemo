@@ -18,7 +18,7 @@ namespace CodingEventsDemo.Models
         {
             Name = name;
             Description = description;
-            ContactEmail = contactEmail;
+            ContactEmail = contactEmail; 
             Id = nextId;
             nextId++;
         }
