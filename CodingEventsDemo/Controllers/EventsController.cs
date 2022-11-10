@@ -74,6 +74,8 @@ namespace coding_events_practice.Controllers
                 context.Events.Remove(theEvent);
             }
 
+            context.SaveChanges();
+
             return Redirect("/Events");
         }
     }
