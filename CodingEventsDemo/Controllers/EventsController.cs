@@ -13,7 +13,7 @@ namespace coding_events_practice.Controllers
 {
     public class EventsController : Controller
     {
-        private EventDbContext context;
+        public EventDbContext context;
 
         public EventsController(EventDbContext dbContext)
         {
@@ -31,7 +31,7 @@ namespace coding_events_practice.Controllers
 
         public IActionResult Add()
         {
-            AddEventViewModel addEventViewModel = new AddEventViewModel();
+            AddEventViewModel addEventViewModel = new();
 
             return View(addEventViewModel);
         }
@@ -41,7 +41,7 @@ namespace coding_events_practice.Controllers
         {
             if (ModelState.IsValid)
             {
-                Event newEvent = new Event
+                Event newEvent = new()
                 {
                     Name = addEventViewModel.Name,
                     Description = addEventViewModel.Description,
