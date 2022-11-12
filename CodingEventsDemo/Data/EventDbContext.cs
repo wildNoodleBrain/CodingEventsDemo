@@ -10,6 +10,7 @@ namespace CodingEventsDemo.Data
 
         public EventDbContext(DbContextOptions<EventDbContext> options) : base(options)
         {
+
         }
     }
 }
