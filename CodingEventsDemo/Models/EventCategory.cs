@@ -25,9 +25,9 @@ namespace CodingEventsDemo.Models
         public EventCategory()
         {
         }
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(base.GetHashCode(), Database, ChangeTracker, Model, ContextId, Name, Id);
-        }
+       // public override int GetHashCode()
+        //{
+          //  return HashCode.Combine(base.GetHashCode(), Database, ChangeTracker, Model, ContextId, Name, Id);
+        //}
     }
 }
