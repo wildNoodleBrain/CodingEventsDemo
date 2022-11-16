@@ -41,8 +41,9 @@ namespace CodingEventsDemo.Controllers
             {
                 EventCategory newCategory = new EventCategory
                 {
-                    Name = addEventCategoryViewModel.EventCategoryName
+                    Name = addEventCategoryViewModel.Name
                 };
+                
                 context.Categories.Add(newCategory);
                 context.SaveChanges();
 

@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
+
+
+
 namespace CodingEventsDemo.ViewModels
 {
     public class AddEventCategoryViewModel
