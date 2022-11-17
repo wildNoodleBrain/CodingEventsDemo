@@ -1,7 +1,7 @@
 ﻿using System;
 namespace CodingEventsDemo.Models
 {
-    public enum EventType
+    public enum EventDetails
     {
         Conference,
         Meetup,
