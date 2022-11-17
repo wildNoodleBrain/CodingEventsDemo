@@ -13,7 +13,7 @@ namespace CodingEventsDemo.Models
         public EventCategory Category { get; set; }
         public int CategoryId { get; set; }  
 
-        public EventDetails Type { get; set; }
+       // public EventDetails Type { get; set; }
 
         public int Id { get; set; }
 
