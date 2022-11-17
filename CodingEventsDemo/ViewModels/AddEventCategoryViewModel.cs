@@ -9,6 +9,6 @@ namespace CodingEventsDemo.ViewModels
     {
         [Required(ErrorMessage = "Name of Event is required.")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Name must be between 3 and 20 characters")]
-        public string EventCategoryName { get; set; }
+        public string Name { get; set; }
     }
 }
