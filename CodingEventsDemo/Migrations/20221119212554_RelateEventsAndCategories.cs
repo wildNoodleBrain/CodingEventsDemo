@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace CodingEventsDemo.Migrations
 {
-    public partial class MyInitialMigration : Migration
+    public partial class RelateEventsAndCategories : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

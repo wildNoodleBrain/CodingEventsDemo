@@ -45,13 +45,13 @@ namespace coding_events_practice.Controllers
         {
             if (ModelState.IsValid)
             {
-                EventCategory theCategory = context.Categories.Find(addEventViewModel.CategoryId);
+                EventCategory category = context.Categories.Find(addEventViewModel.CategoryId);
                 Event newEvent = new Event
                 {
                     Name = addEventViewModel.Name,
                     Description = addEventViewModel.Description,
                     ContactEmail = addEventViewModel.ContactEmail,
-                    Category = theCategory
+                    Category = category
                 };
 
                 context.Events.Add(newEvent);
