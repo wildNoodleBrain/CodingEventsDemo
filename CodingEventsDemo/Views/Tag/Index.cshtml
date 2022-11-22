@@ -1,8 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
 @model List<CodingEventsDemo.Models.Tag>
 
     <h1>All Event Tags</h1>
@@ -22,7 +18,7 @@
             {
                 <tr>
                     <td>@tag.Id</td>
-                    <td>@tag.Name</td>
+                    <td><a asp-controller="Tag" asp-action="Detail" asp-route-id="@tag.Id">@tag.Name</a></td>
                 </tr>
             }
         </table>
